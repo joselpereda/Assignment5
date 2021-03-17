@@ -45,6 +45,16 @@
                 <option value="5">Sales</option>
             </select>
         </div>
+
+        <script>	window.addEventListener('load', init);
+            function init() {
+                let btn = document.getElementById('myButton');
+                btn.addEventListener('click', function () {
+                    console.log('Hello World');		
+                });	
+            }
+        </script>
+
         <button type="submit" class="btn btn-primary">Add Employee</button>
      
     </form>
