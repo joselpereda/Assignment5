@@ -14,14 +14,14 @@ window.addEventListener('load', () => {
     };
 
     //GET USER INPUT VALUES
-    employeeId =            $("id").value;
-    employeeName =          $("name").value;
-    extension =             $("extension").value;
-    email =                 $("email").value;
-    department =            $("department").value;
+    employeeId =            $('id').value;
+    employeeName =          $('name').value;
+    extension =             $('extension').value;
+    email =                 $('email').value;
+    department =            $('department').value;
 
     //GET THE FORMS'S ID
-    form =                  window.document.getElementById("empForm");    
+    form =                  window.document.getElementById('empForm');    
 
     form.addEventListener('submit', function (e) {
         e.preventDefault();
