@@ -6,6 +6,7 @@ let email;
 let department;
 let form;
 
+// HANDLE FORM EVENT
 window.addEventListener('load', () => {
 
     //GET DOM ELEMENTS
@@ -23,14 +24,19 @@ window.addEventListener('load', () => {
     //GET THE FORMS'S ID
     form =                  $('empForm');    
 
+    //PREVENT DEFAULT SUBMIT BUTTON BEHAVIOR
     form.addEventListener('submit', function (e) {
         e.preventDefault();
+
+        // INSTEAD PRINT FORM INPUT VALUES TO THE CONSOLE
+        // DID NOT WORK IF USED VARIALBE NAMES LISTED ABOVE. NOT SURE WHY.
+        // USED $().value instead
         console.log("Some messages have been moved to the Issues panel.");
-        console.log(`ID: ${employeeId}`);
-        console.log(`Name: ${employeeName}`);
-        console.log(`Extension: ${extension}`);
-        console.log(`Email: ${email}`);
-        console.log(`Department: ${department}`);
+        console.log(`ID: ${$('id').value}`);
+        console.log(`Name: ${$('name').value}`);
+        console.log(`Extension: ${$('extension').value}`);
+        console.log(`Email: ${$('email').value}`);
+        console.log(`Department: ${$('department').value}`);
     });
 
 });
