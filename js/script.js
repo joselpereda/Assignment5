@@ -9,8 +9,8 @@ let form;
 window.addEventListener('load', () => {
 
     //GET DOM ELEMENTS
-    const $ = (idValue) => {
-        return document.getElementById(idValue);
+    const $ = (id) => {
+        return document.getElementById(id);
     };
 
     //GET USER INPUT VALUES
@@ -21,15 +21,17 @@ window.addEventListener('load', () => {
     department =            $('department').value;
 
     //GET THE FORMS'S ID
-    form =                  window.document.getElementById('empForm');    
+    form =                  $('empForm');    
 
     form.addEventListener('submit', function (e) {
         e.preventDefault();
-        console.log('hello world - 1');
-        console.log('hello world - 2');
-        console.log('hello world - 3');
+        console.log("Some messages have been moved to the Issues panel.");
+        console.log(`ID: ${employeeId}`);
+        console.log(`Name: ${employeeName}`);
+        console.log(`Extension: ${extension}`);
+        console.log(`Email: ${email}`);
+        console.log(`Department: ${department}`);
     });
-    
-    console.log(employeeName);
+
 });
 
